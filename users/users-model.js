@@ -1,11 +1,16 @@
 const db = require("../database/dbConfig");
 
 module.exports = {
+  getAll,
   add,
   find,
   findBy,
   findById
 };
+
+function getAll() {
+  return db("users");
+}
 
 function find() {
   return db("users").select("id", "username", "password");

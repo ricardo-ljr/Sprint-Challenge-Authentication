@@ -3,9 +3,9 @@ const server = require("../api/server.js");
 
 const Users = require("../users/users-model");
 
-describe("auth-router", function() {
+describe("\n * Auth-router", function() {
   // test the POST for register
-  describe("POST /register", function() {
+  describe("\n * POST /register", function() {
     it("should return new user with text/html", function() {
       return request(server)
         .post("/api/auth/register")
@@ -15,7 +15,7 @@ describe("auth-router", function() {
     });
   });
 
-  describe("POST /register err", function() {
+  describe("\n * POST /register err", function() {
     it("should not return JSON", function() {
       return request(server)
         .post("/api/auth/register")
@@ -36,7 +36,7 @@ describe("auth-router", function() {
   });
 
   // test the POST for login
-  describe("POST /login", function() {
+  describe("\n * POST /login", function() {
     it("should return JSON", function() {
       return request(server)
         .post("/api/auth/login")
@@ -46,7 +46,7 @@ describe("auth-router", function() {
     });
   });
 
-  describe("POST /login err", function() {
+  describe("\n * POST /login err", function() {
     it("should not match text/html", function() {
       return request(server)
         .post("/api/auth/login")
